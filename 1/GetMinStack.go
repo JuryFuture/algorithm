@@ -25,6 +25,9 @@ func (s *Stack) push(i int) {
 }
 
 func (s *Stack) pop() int {
+	if s.size == 0 {
+		panic("栈已空")
+	}
 	s.size--
 	v := s.data[s.size]
 
